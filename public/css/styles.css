@@ -1,0 +1,134 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: plum;
+}
+
+.container {
+    width: 700px;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul > li {
+    margin-bottom: 5px;
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.header-menu {
+    font-size: 15px;
+    font-weight: bolder;
+    float: right;
+    font-family:ArialBlack,sans-serif ;
+}
+
+input[type="text"], textarea {
+    box-sizing: border-box;
+    width: 550px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 120px;
+}
+
+.error {
+    font-size: 12px;
+    color: tomato;
+}
+
+.edit {
+    font-size: 12px;
+}
+
+.del {
+    font-size: 12px;
+}
+
+.after-logout{
+    font-size: 20px;
+}
+
+.header-wrapper h1{
+    font-size: 40px;
+}
+
+.header-wrapper h2{
+    font-size: 30px;
+}
+
+.main-container h3{
+    font-size: 20px;
+
+}
+
+.header-wrapper{
+    margin-bottom: 70px;
+}
+
+.btn{
+    font-size: 30px;
+    padding: 5px 10px;
+    width: 50%;
+}
+
+.logOut-btn{
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.sub-btn{
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.select-category{
+    margin-top: 40px;
+}
+
+.check-category{
+    margin-top: 40px;
+}
+
+@media all and (max-width: 1200px) {
+
+}
+
+/* スマホ向けレイアウト */
+@media all and (max-width: 670px) {
+
+    .container {
+        width: 100%;
+        margin: 15px auto;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
