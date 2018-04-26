@@ -47,17 +47,20 @@ class PostsController extends Controller
     }
 
     public function store(PostRequest $request) {
-        $post = new Post();
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-                 $post->save();
-                 $inserts = $request->kind;
-                 foreach ($inserts as $insert) {
-                     $category_post = new App\CategoryPost();
-                     $category_post->category_id = $insert;
-                     $category_post->post_id = $post->id;
-                     $category_post->save();
-                 }
+        DB::transaction(function () use($request){
+            $post = new Post();
+            $post->title = $request->input('title');
+            $post->body = $request->input('body');
+            $post->save();
+            $inserts = $request->kind;
+            foreach ($inserts as $insert) {
+                 $category_post = new App\CategoryPost();
+                 $category_post->category_id = $insert;
+                 $category_post->post_id = $post->id;
+                 $category_post->save();
+            }
+        });
+
         return redirect()->action('PostsController@index');
     }
 

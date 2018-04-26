@@ -17,8 +17,6 @@ class CategoriesController extends Controller
         $this->middleware('auth');
     }
 
-
-
     public function select() {
         $categories = Category::all();
         return view('categories.select',['categories'=>$categories]);
@@ -35,7 +33,6 @@ class CategoriesController extends Controller
         $category->delete();
         return redirect()->back();
     }
-
 }
 
 
