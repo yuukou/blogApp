@@ -8,7 +8,7 @@
         New Post
     </h1>
         <p>
-            <a href="{{ url('categories/category')}}" >Categories</a>
+            <a href="{{ url('/categories')}}" >Categories</a>
         </p>
     <form method="post" action="{{ url('/posts') }}">
         <div class="check-category">
